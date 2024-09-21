@@ -1,6 +1,6 @@
-# Keyloger-KeyStriker
+# Keylogger-KeyStriker
 ---------------------
-A linux keyloger with the possibility to launch it at startup.
+A linux keylogger with the possibility to launch it at startup.
 
 1) Compile the source with code blocks IDE, codeblocks must be in root -> sudo codeblocks in a terminal.
 
@@ -18,23 +18,37 @@ root 6727 0.0 0.0 4380 76 ? Ss 03:26 0:00 ./KeyStriker
 
 The keylogger is running.
 
--> For stop the keyloger use the command : sudo killall KeyStriker 
+-> For stop the keyloger use the command : 
+
+sudo killall KeyStriker 
 
 or push F12 for go out properly of the program.
 
 -> For launch the programm at startup follow this steps :
 
-- copy the KeyStriker binarie in /usr/bin and /usr/sbin with the command :  sudo cp KeyStriker /usr/bin && sudo cp KeyStriker /usr/sbin
+- copy the KeyStriker binarie in /usr/bin and /usr/sbin with the command :
 
-- make the script daemon_launcher.sh executable wiht the command : sudo chmod +x daemon_launcher.sh
+sudo cp KeyStriker /usr/bin && sudo cp KeyStriker /usr/sbin
 
-- copy the script called daemon_launcher.sh in /etc/init.d/ with the following command : sudo cp daemon_launcher.sh /etc/init.d
+- make the script daemon_launcher.sh executable wiht the command :
 
-- make a symbolic link with this command :  sudo ln -s /etc/init.d/daemon_launcher.sh /etc/rc2.d/S88daemon_launcher.sh
+sudo chmod +x daemon_launcher.sh
 
-- make the script startup.sh executable with the command :  sudo chmod +x startup.sh
+- copy the script called daemon_launcher.sh in /etc/init.d/ with the following command :
+
+sudo cp daemon_launcher.sh /etc/init.d
+
+- make a symbolic link with this command :
+
+sudo ln -s /etc/init.d/daemon_launcher.sh /etc/rc2.d/S88daemon_launcher.sh
+
+- make the script startup.sh executable with the command :
+
+sudo chmod +x startup.sh
 
 - in script folder launch the script called startup.sh
+
+./startup.sh
 
 You 're done.
 
@@ -44,9 +58,13 @@ Then the keylopgger run in background and keep logging all key striked.
 
 For stop the program at startup follow this steps :
 
-- make the script delete_startup.sh executable with the command : sudo chmod +x delete_startup.sh
+- make the script delete_startup.sh executable with the command :
 
-- run the script in script folder called delete_startup.sh with the command :  sudo ./delete_startup.sh
+sudo chmod +x delete_startup.sh
+
+- run the script in script folder called delete_startup.sh with the command :
+
+sudo ./delete_startup.sh
 
 You 're done.
 
