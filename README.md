@@ -6,11 +6,11 @@ A linux keylogger with the possibility to launch it at startup.
 
 Or from src folder and linux command line : gcc main.c keylogger.c utils.c -o KeyStriker
 
-2) Then for launch the keyloger use the command : sudo ./KeyStriker
+2) Then for launch the keylogger use the command : sudo ./KeyStriker
 
 The log keys are in /var/log/KeyStriker.log
 
--> For see at any time if the keyloger is running use the command : ps -aux | grep KeyStriker
+-> For see at any time if the keylogger is running use the command : ps -aux | grep KeyStriker
 
 if you see a line like this :
 
@@ -18,13 +18,13 @@ root 6727 0.0 0.0 4380 76 ? Ss 03:26 0:00 ./KeyStriker
 
 The keylogger is running.
 
--> For stop the keyloger use the command : 
+-> For stop the keylogger use the command : 
 
 sudo killall KeyStriker 
 
 or push F12 for go out properly of the program.
 
--> For launch the programm at startup follow this steps :
+-> For launch the program at startup follow this steps :
 
 - copy the KeyStriker binarie in /usr/bin and /usr/sbin with the command :
 
